@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/boostrap/styles.css">
+    <title>section-Gómez</title>
+</head>
+<body>
+<header>
+    <div class="logo">
+        <img src="assets/boostrap/imagenes/logo-com-1024x512-20190724.png" alt="Logo de pagina">
+    </div>
+    <nav>
+        <ul class="menu">
+            <li><a href="#seccion1">Sección 1</a></li>
+            <li><a href="#seccion2">Sección 2</a></li>
+            <li><a href="#seccion3">Sección 3</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <section id="seccion1">
+        <div class="contenido-seccion">
+            <h2>Sección 1</h2>
+            <p>Seccion galaxia</p>
+        </div>
+        <img src="assets/boostrap/imagenes/que-es-el-grupo-local-y-cuantas-galaxias-hay-en-el.jpg" alt="Imagen de la Seccion 1">
+    </section>
+
+    <section id="seccion2">
+        <div class="contenido-seccion">
+            <h2>Sección 2</h2>
+            <p>sistema solar</p>
+        </div>
+        <img src="assets/boostrap/imagenes/recientemente-pluton-dejo-de-ser-considerado-un-planeta-del-sistema-solar.jpeg" alt="Imagen de la Seccion 2">
+    </section>
+
+    <section id="seccion3">
+        <div class="contenido-seccion">
+            <h2>Sección 3</h2>
+            <p>Universo</p>
+        </div>
+        <img src="assets/boostrap/imagenes/645a08d9d7d6b.webp" alt="Imagen de la Seccion 3">
+    </section>
+</main>
+
+<script>
+    const menuLinks = document.querySelectorAll('nav ul.menu li a');
+
+
+    menuLinks.forEach(link => {
+        link.addEventListener('click', () => {
+
+            menuLinks.forEach(link => {
+                link.classList.remove('active');
+            });
+
+
+            link.classList.add('active');
+        });
+    });
+</script>
+<footer>
+    <div class="container">
+        <p>Derechos de autor © 2023 Felipe Gomez</p>
+    </div>
+</footer>
+
+</body>
+</html>
